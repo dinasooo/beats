@@ -1,0 +1,25 @@
+.menu{
+    margin-top: 36px;
+    margin-right: 46px;
+}
+
+.menu__list{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.menu__item{
+    margin-right: 27px;
+
+    :last-child{
+        margin-right: 0;
+    }
+}
+
+.menu__link{
+    color: #292929;
+}
