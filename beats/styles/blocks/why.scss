@@ -1,0 +1,97 @@
+.why{
+    min-height: 650px;
+    position: relative;
+    background: url(../img/whydecor.png) left top 57% no-repeat;
+}
+
+.why__block-title{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.why__title{
+    text-transform: uppercase;
+    font-size: 48px;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.why__subtitle{
+    text-align: center;
+    width: 590px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.why__list{
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.why__img {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    background: #F5F5F5;
+    border-radius: 50%;
+    margin-bottom: 58px;
+}
+
+.why__icon {
+    top: 31px;
+    height: 50%;
+    position: absolute;
+    left: 32px;
+}
+
+.why__item-title {
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7px;
+}
+
+.why__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why__item-subtitle {
+    text-align: center;
+    line-height: 1.4;
+    color: #666666;
+}
+
+.why__circles {
+    margin-bottom: 177px;
+    margin-left: 59px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.why__circle{
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    background: #DADADA;
+    border-radius: 50%;
+
+    :last-child{
+        margin-right: 0;
+    }
+}
+
+.why__circle-big{
+    margin-right: 5px;
+    width: 13px;
+    height: 13px;
+    background: #DADADA;
+    border-radius: 50%;
+}

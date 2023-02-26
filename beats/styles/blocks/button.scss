@@ -1,0 +1,27 @@
+.button{
+    color: white;
+    background: #E01F3D;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 18px 41px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    &:hover{
+        background: $hoverRed;
+        opacity: 0.8;
+    }
+
+    &--transp{
+        background: transparent;
+        text-transform: none;
+        color: white;
+
+        &:hover{
+            background: none;
+            color: $hoverRed;
+            opacity: 0.8;
+        }
+    }
+}
