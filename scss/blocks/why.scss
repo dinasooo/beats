@@ -1,0 +1,112 @@
+.why{
+    position: relative;
+    background: url(../img/whydecor.png) left top 57% no-repeat;
+
+    @include phones{
+        background: none;
+    }
+}
+
+.why__block-title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: rem(62px);
+}
+
+.why__title{
+    margin-bottom: rem(18px);
+}
+
+.why__subtitle{
+    text-align: center;
+    width: rem(590px);
+    line-height: 1.2;
+    color: #666666;
+
+    @include phones{
+        padding: 0 14%;
+    }
+}
+
+.why__list{
+    display: flex;
+    text-align: center;
+    @include phones{
+        flex-direction: column;
+    }
+}
+
+.why__img {
+    position: relative;
+    width: rem(128px);
+    height: rem(128px);
+    padding: rem(30px);
+    background: #F5F5F5;
+    border-radius: 50%;
+    margin-bottom: rem(21px);
+
+    @include phones{
+        margin-bottom: 0;
+        margin-right: rem(20px);
+    }
+}
+
+.why__icon {
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+.why__item-title {
+    font-weight: 700;
+    font-size: rem(24px);
+    line-height: 1.2;
+    margin-bottom: rem(7px);
+}
+
+.why__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3.2%;
+    flex: 1;
+    position: relative;
+
+    @include phones{
+        flex-direction: row;
+        padding: 0;
+        margin-bottom: rem(21px);
+        text-align: left;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        right: rem(-29px);
+        top: rem(59px);
+        width: rem(67px);
+        height: rem(21px);
+        background: url(../img/why-dots.png) center / contain no-repeat ;
+
+        @include tablets{
+            background: none;
+            padding: 0;
+        }
+    }
+    &:last-child{
+        padding-right: 0;
+
+        &::before{
+            display: none;
+        }
+    }
+    &:first-child{
+        padding-left: 0;
+    }
+}
+
+.why__item-subtitle {
+    line-height: 1.2;
+    color: #666666;
+}

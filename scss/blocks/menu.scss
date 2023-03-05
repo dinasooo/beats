@@ -1,0 +1,32 @@
+.menu{
+    margin: 0 rem(30px);
+    // margin-right: rem(9px);
+
+    @include tablets{
+        display: none;
+    }
+}
+
+.menu__list{
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.menu__item{
+    margin-right: rem(27px);
+    margin-bottom: rem(10px);
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.menu__link{
+    font-family: $fontAlegreya;
+    font-size: rem(18px);
+    color: #292929;
+    white-space: nowrap;
+}

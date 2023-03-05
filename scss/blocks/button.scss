@@ -1,0 +1,26 @@
+.button{
+    color: white;
+    background: $red;
+    border-radius: rem(100px);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    padding: rem(18px) rem(41px);
+    cursor: pointer;
+    border: rem(1px) solid transparent;
+    &:hover{
+        background: $hoverRed;
+    }
+
+    &--transp{
+        background: transparent;
+        text-transform: none;
+        color: white;
+        padding: rem(18px) rem(8px);
+
+        &:hover{
+            background: none;
+            color: $hoverRed;
+        }
+    }
+}
