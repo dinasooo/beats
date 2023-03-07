@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/index.js">
+    
     <title>BEATS</title>
 </head>
 <body>
@@ -13,10 +15,12 @@
             <section class="section hero">
                 <div class="container hero__container">
                     <header class="header">
-                <div class="logo">
-                        <img src="./img/logo.png" alt="лого BEATS" class="logo__img">
-                </div>
-                <nav class="menu">
+                        <div class="logo">
+                            <svg class="logo__icon">
+                                <use xlink:href="./svg/sprite.svg#beats"/>
+                            </svg>
+                        </div>
+                        <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
                             <a href="" class="menu__link">О нас</a>
@@ -40,17 +44,19 @@
                             <a href="" class="menu__link">Контакты</a>
                         </li>
                     </ul>
-                </nav>
-                <address class="contacts header__contacts">
-                    <img src="./img/contacts.png" alt="phone icon" class="contscts__icon">
-                    <a href="tel:+78009039090" class="contacts__links">8 800 903 90 90</a>
-                </address>
+                        </nav>
+                        <address class="contacts header__contacts">
+                            <svg class="logo__phone">
+                                <use xlink:href="./svg/sprite.svg#phone"/>
+                            </svg>
+                            <a href="tel:+78009039090" class="contacts__links">8 800 903 90 90</a>
+                        </address>
+                        <a href="" class="hamburger">
+                        <span class="hamburger__plank"></span>
+                        <span class="hamburger__plank"></span>
+                        <span class="hamburger__plank"></span>
+                        </a>
                     </header>
-                    <a href="" class="hamburger">
-                        <span class="hamburger__plank"></span>
-                        <span class="hamburger__plank"></span>
-                        <span class="hamburger__plank"></span>
-                    </a>
                     <div class="hero__title-section">
                         <h1 class="hero__title">Беспроводные наушники Beats Solo 3</h1>
                             <p class="hero__text">Встречайте новую версию наушников из&nbsp;линейки Powerbeats.</p>
