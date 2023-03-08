@@ -15,4 +15,8 @@
     background: #292929;
     height: 4px;
     border-radius: 10px;
+    margin-bottom: 3px;
+    &:last-child{
+        margin-bottom: 0;
+    }
 }

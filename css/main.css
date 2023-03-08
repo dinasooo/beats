@@ -498,9 +498,14 @@ a {
   width: 2.5rem;
 }
 
-.logo__img {
-  width: 100;
-  height: auto;
+.logo__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.logo__phone {
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .button {
@@ -641,11 +646,6 @@ a {
     margin-bottom: 0;
     margin-right: 1.25rem;
   }
-}
-
-.why__icon {
-  min-width: 100%;
-  min-height: 100%;
 }
 
 .why__item-title {
@@ -963,6 +963,7 @@ a {
 }
 
 .feature__icon {
+  height: 2.8125rem;
   width: 2.8125rem;
   margin-right: 0.5rem;
 }
@@ -1157,6 +1158,10 @@ a {
   background: #292929;
   height: 4px;
   border-radius: 10px;
+  margin-bottom: 3px;
+}
+.hamburger__plank:last-child {
+  margin-bottom: 0;
 }
 
 .map {
@@ -1166,6 +1171,12 @@ a {
 }
 
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   right: 0;
   left: 0;
@@ -1199,5 +1210,17 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.socials__item {
+  margin-right: 0.625rem;
+}
+.socials__item:last-child {
+  margin-right: 0;
+}
+
+.socials__icon {
+  height: 1.875rem;
+  width: 1.875rem;
 }
 /*# sourceMappingURL=main.css.map */

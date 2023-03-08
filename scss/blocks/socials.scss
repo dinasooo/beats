@@ -1,4 +1,16 @@
 .socials__list{
-    display: flex;
-    
+    display: flex; 
+}
+
+.socials__item{
+    margin-right: rem(10px);
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.socials__icon{
+    height: rem(30px);
+    width: rem(30px);
 }
