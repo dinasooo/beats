@@ -1,3 +1,15 @@
+.socials{
+    transform: translateX(-20px);
+
+    @include tablets{
+        transform: translateX(-30px);
+    }
+
+    @include phones{
+        transform: initial
+    }
+}
+
 .socials__list{
     display: flex; 
 }
@@ -8,9 +20,18 @@
     &:last-child{
         margin-right: 0;
     }
+
+    @include phones{
+        margin-right: rem(14px);
+    }
 }
 
 .socials__icon{
     height: rem(30px);
     width: rem(30px);
+
+    @include phones{
+        height: rem(24px);
+        width: rem(24px);
+    }
 }

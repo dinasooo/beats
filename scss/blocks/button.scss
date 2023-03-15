@@ -12,6 +12,10 @@
         background: $hoverRed;
     }
 
+    @include phones{
+        padding: rem(21px) rem(41px);
+    }
+
     &--transp{
         background: transparent;
         text-transform: none;
@@ -21,6 +25,13 @@
         &:hover{
             background: none;
             color: $hoverRed;
+        }
+    }
+
+    &--phones{
+        @include phones{
+            font-size: rem(19px);
+            line-height: 0.94;
         }
     }
 }

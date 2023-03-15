@@ -19,13 +19,13 @@ $z-fixed-menu: 100;
 
 @import 'lay/normalize';
 @import 'lay/fonts';
-@import 'lay/media.scss';
+@import 'lay/media';
 
 
-@import 'lay/base.scss';
+@import 'lay/base';
 @import 'blocks/header';
 @import 'blocks/menu';
-@import 'blocks/contacts.scss';
+@import 'blocks/contacts';
 @import 'blocks/logo.scss';
 @import 'blocks/button.scss';
 @import 'blocks/fixed-menu.scss';
@@ -38,7 +38,9 @@ $z-fixed-menu: 100;
 @import 'blocks/form.scss';
 @import 'blocks/delivery.scss';
 @import 'blocks/radio.scss';
-@import 'blocks/hamburger.scss';
+@import 'blocks/burger.scss';
 @import 'blocks/map.scss';
 @import 'blocks/footer.scss';
 @import 'blocks/socials.scss';
+@import 'blocks/slider';
+@import 'blocks/crew';

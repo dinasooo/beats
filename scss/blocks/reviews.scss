@@ -21,6 +21,8 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
+        padding: rem(56px) rem(24px) rem(40px);
+        margin-bottom: rem(32px);
     }
 
 
@@ -47,17 +49,28 @@
     width: rem(130px);
     height: rem(132px);
     margin-right: 0;
+    margin-bottom: rem(32px);
+    }
+
+    @include phones{
+        margin-bottom: 1.2rem;
     }
 }
 
 .review__photo{
     max-width: 100%;
     height: auto;
+    max-height: 100%;
 }
 
 .review__desc{
     max-width: rem(456px);
     padding-top: rem(33px);
+
+    @include tablets{
+        padding-top: 0;
+        max-width: auto;
+    }
 }
 
 .review__subtitle{
@@ -65,16 +78,28 @@
     font-size: rem(24px);
     line-height: 1.16;
     margin-bottom: rem(27px);
+
+    @include tablets{
+        margin-bottom: rem(16px);
+    }
+
+    @include phones{
+        margin-bottom: 0.5rem;
+    }
 }
 
 .review__text{
     line-height: 1.2;
     color: #666;
     margin-bottom: rem(38px);
+
+    @include tablets{
+        margin-bottom: rem(16px);
+    }
 }
 
 .review__name{
-    font-weight: rem(700px);
+    font-weight: 700;
     font-size: rem(18px);
     line-height: 1.16;
     color: black;

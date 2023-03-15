@@ -7,15 +7,33 @@
     }
 }
 
+.why__container{
+    @include tablets{
+        width: 99%;
+    }
+    @include phones{
+        width: 95%;
+    }
+}
+
 .why__block-title{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-bottom: rem(62px);
+    @include tablets{
+        margin-bottom: rem(53px);
+
+    }
 }
 
 .why__title{
     margin-bottom: rem(18px);
+
+    @include tablets{
+        margin-bottom: rem(11px);
+
+    }
 }
 
 .why__subtitle{
@@ -47,8 +65,9 @@
     margin-bottom: rem(21px);
 
     @include phones{
+        flex-shrink: 0;
         margin-bottom: 0;
-        margin-right: rem(20px);
+        margin-right: rem(12px);
     }
 }
 
@@ -57,6 +76,14 @@
     font-size: rem(24px);
     line-height: 1.2;
     margin-bottom: rem(7px);
+
+    @include tablets{
+        margin-bottom: rem(18px);
+    }
+
+    @include phones{
+        margin-bottom: rem(6px);
+    }
 }
 
 .why__item {
@@ -67,10 +94,14 @@
     flex: 1;
     position: relative;
 
+    @include tablets{
+        padding: 0 0.4%;
+    }
+
     @include phones{
         flex-direction: row;
         padding: 0;
-        margin-bottom: rem(21px);
+        margin-bottom: rem(33px);
         text-align: left;
     }
 
@@ -90,6 +121,7 @@
     }
     &:last-child{
         padding-right: 0;
+        margin: 0;
 
         &::before{
             display: none;
