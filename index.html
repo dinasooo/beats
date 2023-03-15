@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./js/index.js">
-    
     <title>BEATS</title>
 </head>
 <body>
@@ -51,17 +49,22 @@
                             </svg>
                             <a href="tel:+78009039090" class="contacts__links">8 800 903 90 90</a>
                         </address>
-                        <a href="" class="hamburger">
-                        <span class="hamburger__plank"></span>
-                        <span class="hamburger__plank"></span>
-                        <span class="hamburger__plank"></span>
-                        </a>
+                        <!-- <div class="header__hamburger-button hamburger hamburger--squeeze id="hamburgerButton">
+                            <div class="hamburger__box">
+                                <div class="hamburger--inner"></div>
+                            </div>
+                        </div> -->
+                        <div class="burger" id="burger">
+                            <span class="burger__plank"></span>
+                            <span class="burger__plank"></span>
+                            <span class="burger__plank"></span>
+                        </div>
                     </header>
                     <div class="hero__title-section">
                         <h1 class="hero__title">Беспроводные наушники Beats Solo 3</h1>
-                            <p class="hero__text">Встречайте новую версию наушников из&nbsp;линейки Powerbeats.</p>
+                            <p class="hero__text">Встречайте новую версию наушников из линейки Powerbeats.</p>
                             <div class="hero__button">
-                                <button class="button">Заказать</button>
+                                <button class="button button--phones">Заказать</button>
                             </div>
                     </div>
                     <div class="hero__icons-section">
@@ -89,7 +92,7 @@
                 </div>
             </section>            
             <section class="section why">
-                <div class="container">
+                <div class="container why__container">
                     <div class="why__block-title">
                         <h2 class="section-title why__title">почему beats solo 3?</h2>
                         <div class="why__subtitle">Процессор W1 работает невероятно эффективно и позволяет легко 
@@ -128,7 +131,184 @@
                         </li>
                     </ul>
                 </div>  
-            </section>                          
+            </section>   
+            <section class="section slider">
+                <div class="slider__container">
+                    <a href="#" class="slider__link" id="left">
+                        <svg class="slider__arrow">
+                            <use xlink:href="./svg/sprite.svg#left"/>
+                        </svg>
+                    </a>
+                    <div class="container slider__content">
+                        <div class="slider__picture">
+                        <img src="./img/hp.png" alt="hp" class="slider__img">
+                        </div>
+                        <div class="slider__section">
+                            <div class="slider__rel">
+                                <div class="slider__gear">
+                                <svg class="slider__gear--icon">
+                                    <use xlink:href="./svg/sprite.svg#gear"/>
+                                </svg>
+                                </div>
+                                <ul class="slider__gear--list">
+                                    <li class="slider__gear--item">
+                                        <div class="slider__gear--item-icon">
+                                            <svg class="slider__gear--item-img">
+                                                <use xlink:href="./svg/sprite.svg#bluet"/>
+                                            </svg>
+                                        </div>
+                                        <div class="slider__gear--item-info">Bluetooth</div>
+                                        <div class="slider__gear--item-desc">4.0</div>
+                                    </li>
+                                    <li class="slider__gear--item">
+                                        <div class="slider__gear--item-icon">
+                                            <svg class="slider__gear--item-img">
+                                                <use xlink:href="./svg/sprite.svg#road"/>
+                                            </svg>
+                                        </div>
+                                        <div class="slider__gear--item-info">Bluetooth</div>
+                                        <div class="slider__gear--item-desc">4.0</div>
+                                    </li>
+                                    <li class="slider__gear--item">
+                                        <div class="slider__gear--item-icon">
+                                            <svg class="slider__gear--item-img">
+                                                <use xlink:href="./svg/sprite.svg#cabel"/>
+                                            </svg>
+                                        </div>
+                                        <div class="slider__gear--item-info">Bluetooth</div>
+                                        <div class="slider__gear--item-desc">4.0</div>
+                                    </li>
+                                    <li class="slider__gear--item">
+                                        <div class="slider__gear--item-icon">
+                                            <svg class="slider__gear--item-img">
+                                                <use xlink:href="./svg/sprite.svg#kg"/>
+                                            </svg>
+                                        </div>
+                                        <div class="slider__gear--item-info">Bluetooth</div>
+                                        <div class="slider__gear--item-desc">4.0</div>
+                                    </li>
+                                    <li class="slider__gear--item">
+                                        <div class="slider__gear--item-icon">
+                                            <svg class="slider__gear--item-img">
+                                                <use xlink:href="./svg/sprite.svg#paper"/>
+                                            </svg>
+                                        </div>
+                                        <div class="slider__gear--item-info">Bluetooth</div>
+                                        <div class="slider__gear--item-desc">4.0</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h2 class="section-title slider__title">beats solo 3. цвет «атласное серебро»</h2>
+                            <div class="slider__desc">Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему 
+                                iPhone — они мгновенно подключатся к нему.</div>
+                            <div class="slider__block">
+                                <div class="slider__col">
+                                    <div class="slider__col-top">Зарядка</div>
+                                    <div class="slider__col-bottom">2 часа</div>
+                                </div>
+                                <div class="slider__col">
+                                    <div class="slider__col-top">Вес</div>
+                                    <div class="slider__col-bottom">215 грамм</div>
+                                </div>
+                            </div>
+                            <div class="slider__row">
+                                <div class="slider__price">14&nbsp;990&nbsp;₽</div>
+                                <div class="slider__button">
+                                    <button class="button">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="slider__link" id="right">
+                        <svg class="slider__arrow">
+                            <use xlink:href="./svg/sprite.svg#right"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>  
+             <section class="section crew">
+                <div class="container crew__container">
+                    <h2 class="section-title crew__title">Команда</h2>
+                    <ul class="crew__list">
+                        <li class="crew__item">
+                            <div class="crew__photo">
+                                <img src="./img/crew1.png" alt="member 1" class="crew__img">
+                            </div>
+                            <div class="crew__info">
+                                <div class="crew__info-title" id="crew">
+                                    <div class="crew__name">Иван Иванов</div>
+                                    <div class="crew__triangle">
+                                        <svg class="crew__icon">
+                                            <use xlink:href="./svg/sprite.svg#triangle"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="crew__info-subtitle">
+                                    <div class="crew__job">Главный технолог</div>
+                                    <div class="crew__desc">Отвечает за вкусовые качества и калорийность.</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="crew__item">
+                            <div class="crew__photo">
+                                <img src="./img/crew1.png" alt="member 1" class="crew__img">
+                            </div>
+                            <div class="crew__info">
+                                <div class="crew__info-title" id="crew">
+                                    <div class="crew__name">Иван Иванов</div>
+                                    <div class="crew__triangle">
+                                        <svg class="crew__icon">
+                                            <use xlink:href="./svg/sprite.svg#triangle"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="crew__info-subtitle">
+                                    <div class="crew__job">Главный технолог</div>
+                                    <div class="crew__desc">Отвечает за вкусовые качества и калорийность.</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="crew__item">
+                            <div class="crew__photo">
+                                <img src="./img/crew1.png" alt="member 1" class="crew__img">
+                            </div>
+                            <div class="crew__info">
+                                <div class="crew__info-title" id="crew">
+                                    <div class="crew__name">Иван Иванов</div>
+                                    <div class="crew__triangle">
+                                        <svg class="crew__icon">
+                                            <use xlink:href="./svg/sprite.svg#triangle"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="crew__info-subtitle">
+                                    <div class="crew__job">Главный технолог</div>
+                                    <div class="crew__desc">Отвечает за вкусовые качества и калорийность.</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="crew__item">
+                            <div class="crew__photo">
+                                <img src="./img/crew1.png" alt="member 1" class="crew__img">
+                            </div>
+                            <div class="crew__info">
+                                <div class="crew__info-title" id="crew">
+                                    <div class="crew__name">Иван Иванов</div>
+                                    <div class="crew__triangle">
+                                        <svg class="crew__icon">
+                                            <use xlink:href="./svg/sprite.svg#triangle"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="crew__info-subtitle">
+                                    <div class="crew__job">Главный технолог</div>
+                                    <div class="crew__desc">Отвечает за вкусовые качества и калорийность.</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>                    
             <section class="section reviews">
                 <div class="container container__reviews">
                     <h2 class="section-title reviews__title">Отзывы</h2>
@@ -307,5 +487,7 @@
             </li>
         </ul>
     </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
