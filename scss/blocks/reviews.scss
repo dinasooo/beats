@@ -9,13 +9,23 @@
     margin-bottom: rem(32px);
 }
 
+.review{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    transition: opzcity 0.3s;
+}
+
 .review__block{
     background:  #F5F5F5;
+    opacity: 0;
+    left: -999px;
     display: flex;
     margin-bottom: rem(15px);
     overflow: hidden;
     position: relative;
     padding: rem(42px);
+    min-height: 19.5rem;
 
     @include tablets{
         flex-direction: column;
@@ -37,6 +47,12 @@
         left: 50%;
         transform: translateX(-50%);
         top: rem(-55px);
+    }
+
+    &--active{
+        opacity: 1;
+        left: initial;
+        position: relative;
     }
 }
 

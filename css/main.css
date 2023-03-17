@@ -824,8 +824,23 @@ a {
   margin-bottom: 2rem;
 }
 
+.review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  -webkit-transition: opzcity 0.3s;
+  transition: opzcity 0.3s;
+}
+
 .review__block {
   background: #F5F5F5;
+  opacity: 0;
+  left: -999px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -833,6 +848,7 @@ a {
   overflow: hidden;
   position: relative;
   padding: 2.625rem;
+  min-height: 19.5rem;
 }
 @media screen and (max-width: 768px) {
   .review__block {
@@ -860,6 +876,11 @@ a {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: -3.4375rem;
+}
+.review__block--active {
+  opacity: 1;
+  left: initial;
+  position: relative;
 }
 
 .review__img {

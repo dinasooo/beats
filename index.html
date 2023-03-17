@@ -313,7 +313,7 @@
                 <div class="container container__reviews">
                     <h2 class="section-title reviews__title">Отзывы</h2>
                     <div class="reviews__content review">
-                        <div class="review__block">
+                        <div class="review__block review__block--active">
                             <div class="review__img">
                                 <img src="./img/avatar1.png" alt="человек" class="review__photo">
                             </div>
@@ -325,18 +325,49 @@
                                 <div class="review__name">Билли Айлиш</div>
                             </div>
                         </div>
-                        <div class="review__icons">
-                            <div class="review__avatar">
-                                <img src="./img/avatar1.png" alt="" class=" review__icon review__icon--active">
+                        <div class="review__block">
+                            <div class="review__img">
+                                <img src="./img/avatar2.png" alt="человек" class="review__photo">
                             </div>
-                            <div class="review__avatar">
-                                <img src="./img/avatar2.png" alt="" class="review__icon">
-                            </div>
-                            <div class="review__avatar">
-                                <img src="./img/avatar3.png" alt="" class="review__icon">
+                            <div class="review__desc">
+                                <div class="review__subtitle">Отличный звук</div>
+                                <div class="review__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером 
+                                и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. 
+                                </div>
+                                <div class="review__name">Билли Айлиш</div>
                             </div>
                         </div>
+                        <div class="review__block">
+                            <div class="review__img">
+                                <img src="./img/avatar3.png" alt="человек" class="review__photo">
+                            </div>
+                            <div class="review__desc">
+                                <div class="review__subtitle">Отличный звук</div>
+                                <div class="review__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером 
+                                и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. 
+                                </div>
+                                <div class="review__name">Билли Айлиш</div>
+                            </div>
+                        </div>
+                        
                     </div>
+                    <ul class="review__icons">
+                            <li class="review__avatar">
+                                <a href="#" data-open="1" class="review__link">
+                                <img src="./img/avatar1.png" alt="" class=" review__icon review__icon--active">
+                                </a>
+                            </li>
+                            <li class="review__avatar">
+                                <a href="#" data-open="2" class="review__link">
+                                <img src="./img/avatar2.png" alt="" class="review__icon">
+                                </a>
+                            </li>
+                            <li class="review__avatar">
+                                <a href="#" data-open="3" class="review__link">
+                                <img src="./img/avatar3.png" alt="" class="review__icon">
+                                </a>
+                            </li>
+                    </ul>
                 </div>
             </section>            
             <section class="section delivery">
@@ -489,5 +520,6 @@
     </nav>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/reviews.js"></script>
 </body>
 </html>
