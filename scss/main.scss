@@ -17,6 +17,7 @@ $fontAlegreya: 'Alegreya Sans', sans-serif;
 $z-fixed-menu: 100;
 
 
+
 @import 'lay/normalize';
 @import 'lay/fonts';
 @import 'lay/media';
@@ -44,3 +45,4 @@ $z-fixed-menu: 100;
 @import 'blocks/socials.scss';
 @import 'blocks/slider';
 @import 'blocks/crew';
+@import 'blocks/modal';

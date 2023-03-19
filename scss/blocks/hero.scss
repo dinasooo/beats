@@ -80,16 +80,15 @@
     margin-bottom: rem(22px);
     text-transform: uppercase;
 
+    @include tablets{
+        margin-bottom: rem(5px);
+        max-width: 40rem;
+    }
+
     @include phones{
         font-size: rem(32px);
         line-height: 1.125;
         margin-bottom: rem(14px);
-    }
-
-    @include tablets{
-        
-        margin-bottom: rem(5px);
-        max-width: rem(371px);
     }
 }
 

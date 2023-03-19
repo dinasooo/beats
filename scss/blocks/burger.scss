@@ -37,6 +37,7 @@
     z-index: 5;
     overflow: hidden;
     .burger__plank{
+        background-color: #fff;
         &:nth-child(1){
             opacity: 0;
         }
@@ -44,8 +45,8 @@
         &:nth-child(2){
             transform: rotate(45deg);
         }
-        &:nth-child(1){
-            transform: rotate(-45deg) translateY(-7px) translateX(6px);
+        &:nth-child(3){
+            transform: rotate(-45deg) translateY(-5px) translateX(4px);
         }
     }
 }

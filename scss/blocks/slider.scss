@@ -1,34 +1,114 @@
-.slider__container{
-    display: flex;
-    height: 100%;
+.slider{
     background: $gray;
 }
 
+.slider__container{
+    position: relative;
+}
+
+.slider__link{
+    position: absolute;
+    top: 37%;
+
+    @include tablets{
+        top: rem(94px);
+    }
+
+    @include phones{
+        left: rem(80px);
+    }
+
+    &--prev{
+        left: rem(-34px);
+
+        @include tablets{
+            left: 10%;
+        }
+
+        @include phones{
+            left: 0;
+        }
+    }
+
+    &--next{
+        right: rem(-25px);
+
+        @include tablets{
+            right: 10%;
+        }
+        @include phones{
+            right: 19%;
+        }
+    }
+}
+
 .slider__arrow{
-    width: 10%;
+    width: rem(13.5px);
 }
 
 .slider__section{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-right: 0;
+    max-width: rem(419px);
+
+    @include tablets{
+        max-width: rem(614px);
+    }
 }
 
 .slider__content{
+    position: relative;
+}
+
+.bx-wrapper{
+    border: 0;
+    background: transparent ;
+    box-shadow: none;
+}
+
+
+.slider__slide{
     display: flex;
+    justify-content: flex-end;
 
     @include tablets{
         flex-direction: column;
+        align-items: center;
     }
 }
 
 .slider__picture{
-    flex:1
+    flex-shrink: 0;
+    width: rem(452px);
+    height: rem(452px);
+    margin-right: rem(56px);
+    margin-top: rem(30px);
+
+    @include tablets{
+        width: rem(306px);
+        height:rem(306px);;
+        margin: 0;
+        margin-bottom: rem(49px);
+    }
+
+    @include phones{
+        margin-bottom: rem(26px);
+    }
+}
+
+.slider__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .slider__rel{
+    display: inline-flex;
     position: relative;
+    margin-bottom: rem(25px);
+
+    &:hover .slider__gear-list{
+        left: 100%;
+        opacity: 1;
+    }
 
     @include tablets{
         display: none;
@@ -36,55 +116,78 @@
 }
 
 .slider__title{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: rem(36px);
+    line-height: rem(42px);
+    margin-bottom: rem(24px);
+
     @include tablets{
-        font-size: 28px;
+        font-size: rem(28px);
+        line-height: rem(32px);
+        margin-bottom: rem(14px);
+        text-align: center;
+    }
+
+    @include phones{
+        text-align: center;
+        max-width: rem(324px);
+        margin: 0 auto rem(13px);
     }
 }
 
-.slider__gear--icon{
-    height: 91px;
-    width: 91px;
-    border-radius: 4px;
+.slider__gear-icon{
+    height: rem(91px);
+    width: rem(91px);
+    display: block;
 }
 
-.slider__gear--list{
+.slider__gear-list{
     position: absolute;
-    // display: none;
-    background: rgb(141, 141, 141);
-    right: rem(-45px);
+    background: #d5d5d5;
+    left: -9999px;
+    opacity: 0;
     top: 0%;
-    height: rem(294px);
     width: rem(273px);
     border-radius: rem(4px);
-
+    padding: rem(18px) rem(14px);
+    transition: opzcitu .3s;
 }
 
-.slider__gear--item{
+.slider__gear-item{
     display: flex;
-    flex-direction: row;
     align-items: center;
+    padding: rem(6px) rem(12px);
+    margin-bottom: rem(8px);
+
+    &:last-child{
+        margin-bottom: 0;
+    }
 }
 
-.slider__gear--item-img{
-    height: 34px;
-    width: 35px;
+.slider__gear-item-img{
+    height: rem(32px);
+    width: rem(33px);
+    margin-right: rem(12px);
 }
 
-.slider__gear--item-icon{
-    margin: 9px 9px;
-}
-
-.slider__gear--item-info{
-    margin-right: 95px;
+.slider__gear-item-desc{
+    margin-left: auto;
 }
 
 .slider__desc{
     line-height: 1.16;
     color: #666666;
     margin-bottom: rem(27px);
+    max-width: rem(368px);
 
     @include tablets{
         text-align: center;
+        max-width: initial;
+    }
+
+    @include phones{
+        max-width: rem(412px);
     }
 }
 
@@ -95,6 +198,11 @@
 
     @include tablets{
         justify-content: center;
+        padding-right: rem(18px);
+    }
+
+    @include phones{
+        margin-bottom: rem(20px);
     }
 }
 
@@ -104,9 +212,15 @@
     &:last-child{
         margin-right: 0;
     }
+
+    @include tablets{
+        margin-right: rem(86px);
+    }
 }
 
 .slider__col-bottom{
+    font-size: rem(18px);
+    line-height: 1.16;
     font-weight: 700;
     color: #000;
 }
@@ -122,5 +236,17 @@
 .slider__price{
     font-size: rem(36px);
     line-height: 1.67;
-    margin-right: rem(13px);
+    margin-right: rem(18px);
+
+    @include tablets{
+        font-size: rem(40px);
+        line-height: 1.5;
+        margin-right: rem(38px);
+    }
+
+    @include phones{
+        font-size: rem(32px);
+        line-height: rem(60px);
+        margin-right: rem(24px);
+    }
 }

@@ -55,5 +55,7 @@
 
     @include tablets{
         color: white;
+        font-size: rem(36px);
+        line-height: rem(72px);
     }
 }

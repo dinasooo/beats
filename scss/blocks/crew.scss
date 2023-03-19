@@ -1,17 +1,82 @@
-.crew__list{
+.crew__list--desktop{
     display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include tablets{
+        display: none;
+    }
 }
 
-.crew__info-title{
-    display: flex;
+.crew__list--mobile{
+    display: none;
+
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-.crew__icon{
-    height: 10%;
+.crew__item{
+    margin-right: rem(20px);
+    text-align: center;
+
+    &:last-child{
+        margin-right: 0;
+    }
+        
+    @include tablets{
+        margin-bottom: rem(14px);
+    }
+}
+
+.crew__photo{
+    margin-bottom: rem(25px);
+
+    @include tablets{
+        
+        overflow: hidden;
+    }
+}
+
+.crew__button{
+    position: relative;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    margin-bottom: rem(11px);
+}
+
+.crew__triangle{
+    position: absolute;
     width: 10%;
+    top:rem(-63px);
+    right: rem(-25px);
 }
 
-.crew__info-subtitle{
+.crew__name{
+    font-size: rem(18px);
+    font-weight: 700;
+    line-height: rem(21px);
+}
+
+.crew__info{
     height: 0;
     overflow: hidden;
+    transition: height .3s;
+    position: absolute;
+    width: 200px; //тут же можно ставить жесткую ширину? Или ее можно ставить всегда, а вот высоту нет?
+
+    @include tablets{
+        right: 34%;
+        //для планшетов и телефонов нужно как-то убрать абсолют, чтобы сдвигались соседние блоки, но я не знаю как...
+    }
+}
+.crew__job{
+    line-height: rem(19px);
+    margin-bottom: rem(4px);
+}
+
+.crew__desc{
+    color: #666666;
 }
