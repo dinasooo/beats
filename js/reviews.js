@@ -1,4 +1,4 @@
-console.log("файл")
+
 
 // const reviewsAvatars = document.querySelector('.review__icons');
 
@@ -22,7 +22,7 @@ console.log("файл")
 // });
 const findBlock = (alias) =>{
     return $(".reviews__item").filter((ndx, item) => {
-        return $(item).attr("data-linked-width") == alias
+        return $(item).attr("data-linked") == alias
     });
 };
 

@@ -8,7 +8,7 @@
 
 .reviews__list{
     position: relative;
-    min-height: rem(280px);
+    overflow: hidden;
 
     &::before{
         content: "";
@@ -21,6 +21,7 @@
         left: 50%;
         transform: translateX(-50%);
         top: rem(-55px);
+        z-index: 1;
     }
 }
 
@@ -29,35 +30,25 @@
     margin-bottom: rem(32px);
 }
 
-// .review{
-//     display: flex;
-//     flex-direction: row;
-//     position: absolute;
-//     transition: opzcity 0.3s;
-// }
-
 .reviews__item{
     background:  #F5F5F5;
-    opacity: 1;
+    opacity: 0;
     top: 0;
-    left: 0;right: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
     display: flex;
-    margin-bottom: rem(15px);
-    overflow: hidden;
     position: absolute;
     padding: rem(42px);
-    min-height: 19.5rem;
 
     @include tablets{
         flex-direction: column;
         text-align: center;
         align-items: center;
         padding: rem(56px) rem(24px) rem(40px);
-        margin-bottom: rem(32px);
     }
 
-    &:active{
+    &.active{
         opacity: 1;
         left: initial;
         position: static;
@@ -93,7 +84,7 @@
 
     @include tablets{
         padding-top: 0;
-        max-width: auto;
+        max-width: initial;
     }
 }
 
@@ -132,15 +123,22 @@
 .reviews__switcher{
     flex-direction: row;
     display: flex;
-    justify-content: center;
+    justify-content: center
+}
+
+.reviews__switcher-item{
+    width: rem(74px);
+    height: rem(74px);
+    border-radius: 50%;
+    margin-right: rem(10px);
+    &.active, &:hover{
+        outline: 6px solid red;
+    } 
 }
 
 .reviews__switcher-icon{
     width: rem(74px);
     height: rem(74px);
-    border-radius: 50%; 
-    border: rem(5px) solid transparent;
-    &:active{
-        border: rem(5px) solid red;
-    }
+    border-radius: 50%;
 }
+

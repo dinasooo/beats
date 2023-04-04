@@ -1,4 +1,4 @@
-console.log("file")
+
 const openItem = item => {
     const container = item .closest(".crew__item");
     const contentBlock = container.find(".crew__info");

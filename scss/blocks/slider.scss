@@ -9,13 +9,14 @@
 .slider__link{
     position: absolute;
     top: 37%;
+    z-index: 1;
 
     @include tablets{
         top: rem(94px);
     }
 
     @include phones{
-        left: rem(80px);
+        top: rem(80px);
     }
 
     &--prev{
@@ -37,7 +38,7 @@
             right: 10%;
         }
         @include phones{
-            right: 19%;
+            right: 0;
         }
     }
 }

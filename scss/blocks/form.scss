@@ -64,7 +64,7 @@
     border-radius: rem(4px);
 
     &.input-error{
-        border-color: rem(3px) solid red !important;
+        border: rem(3px) solid red ;
     }
 
     @include tablets{
@@ -107,7 +107,6 @@
 
 .form__buttons{
     display: flex;
-    justify-content: center;
 
     @include tablets{
         justify-content: center;
