@@ -1,6 +1,6 @@
 let burger =document.querySelector('.burger');
 let menu = document.querySelector('.menu');
-let body = document.querySelector('.body');
+let body = document.querySelector('body');
 
 let links = document.querySelectorAll('.menu__link');
 

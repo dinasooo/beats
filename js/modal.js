@@ -6,7 +6,7 @@ const validateFields = (form, fielsdArray) => {
         }
     });
 
-    const errorFields = form.find("input-error");
+    const errorFields = form.find(".input-error");
 
     return errorFields.length == 0;
 }
@@ -45,7 +45,7 @@ $('.form').submit((e) => {
         });
 
         request.fail(data => {
-            const message = data.responseJSON.message;
+            const message = data.responseJSON.message ?? 'Произошла ошибка';
             content.text(message);
             modal.addClass("error-modal");
         });

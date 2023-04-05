@@ -1461,6 +1461,7 @@ a {
   bottom: 0;
   background: #fff;
   height: 5.375rem;
+  z-index: 2;
 }
 @media screen and (max-width: 768px) {
   .footer {
@@ -2088,7 +2089,7 @@ a {
 }
 
 .colors {
-  background: url(../img/colors.png) center center/cover no-repeat;
+  background: url(../../img/colors.png) center center/cover no-repeat;
   position: relative;
 }
 

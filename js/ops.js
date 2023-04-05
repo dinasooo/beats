@@ -58,7 +58,7 @@ const viewportScroller = () => {
             }
         },
         prev() {
-            if (nextSection.length) {
+            if (prevSection.length) {
                 performeTransition(prevSection.index());
             }
         },
@@ -118,6 +118,7 @@ if (isMobile) {
 
             if (direction == "up") scrollDirection = "next";
             if (direction == "down") scrollDirection = "prev";
+            if(!scrollDirection) return;
 
             scroller[scrollDirection]();
         },
