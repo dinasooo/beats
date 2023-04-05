@@ -1,103 +1,86 @@
-let player;
-const playerContainer = $('.player__block');
+let video;
+let durationControl;
+let soundControl;
+let intervalId;
 
-let eventsInit = () => {
-  $(".player__start").click(e => {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', e=>{
+  video = document.getElementById('video');
 
-    if (playerContainer.hasClass('paused')) {
-      player.pauseVideo();
-    } else {
-      player.playVideo();
-    }
-  });
+  let playLength = document.querySelector('.player__duration--length');
 
-  $(".player__playback").click(e => {
-    const bar = $(e.currentTarget);
-    const clickedPosition = e.originalEvent.layerX;
-    const buttonPosition = (clickedPosition / bar.width()) * 100;
-    const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
+  video.addEventListener('click', playStop);
 
-    $(".player__playback-button").css({
-      left: `${newButtonPositionPercent}%`
-    });
-
-    player.seekTo(newPlaybackPositionSec);
-  });
-
-  $(".player__splash").click(e =>{
-    player.playVideo();
-  })
-};
-
-const formatTime = timeSec => {
-  const roundTime = Math.round(timeSec);
-
-  const minutes = addZero(Math.round(roundTime / 60));
-  const seconds = addZero(roundTime - minutes * 60);
-
-  function addZero(num) {
-    return num < 10 ? `0${num}` : num;
+  let playButtons = document.querySelectorAll('.play');
+  for (let i = 0; i < playButtons.length; i++){
+    playButtons[i].addEventListener('click', playStop);
   }
 
-  return `${minutes} : ${seconds}`;
-};
+  let micControl = document.getElementById('micLevel');
+  micControl.addEventListener('click', soundOf);
 
-const onPlayerReady = () => {
-  let interval;
-  const durationSec = player.getDuration();
+  durationControl = document.getElementById('durationLevel');
+  durationControl.addEventListener('mousedown', stopInterval);
+  durationControl.addEventListener('click', setVideoDuration);
 
-  $(".player__duration-estimate").text(formatTime(durationSec));
+  durationControl.min = 0;
+  durationControl.value = 0;
 
-  if (typeof interval != 'undefined') {
-    clearInterval(interval);
-  }
+  soundControl = document.getElementById('volumeLevel');
+  soundControl.addEventListener('click', changeSoundVolume);
+  soundControl.addEventListener('mouseup', changeSoundVolume);
 
-  interval = setInterval(() => {
-    const completedSec = player.getCurrentTimer();
-    const completedPercent = (completedSec / durationSec) * 100;
+  soundControl.min = 0;
+  soundControl.max = 10;
 
-    $(".player__playback-button").css({
-      left: `${completedPercent}%`
-    })
-    $(".player__duration-completed").text(formatTime(completedSec));
-  }, 1000);
-};
+  soundControl.value = soundControl.max;
+})
 
-const onPlayerStateChange = event => {
-  switch (event.data) {
-    case 1:
-      playerContainer.addClass("active");
-      playerContainer.addClass("paused");
-      break;
+function playStop(){
+  let playImg = document.querySelector('.player__play');
+  playImg.classList.toggle('player__play--active');
 
-    case 2:
-      playerContainer.removeClass("active");
-      playerContainer.removeClass("paused");
-      break;
+  durationControl.max = video.duration;
 
-
+  if(video.paused){
+    video.play();
+    intervalId = setInterval(updateDuration, 1000/66);
+  }else{
+    video.pause();
+    clearInterval(intervalId);
   }
 }
 
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('yt-player', {
-    height: '405',
-    width: '660',
-    videoId: 'm6pE8psWJXE',
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    },
-    playerVars: {
-      controls: 0,
-      disablekb: 0,
-      showinfo: 0,
-      rel: 0,
-      autoplay: 0,
-      modestbranding: 0
-    }
-  });
+function updateDuration(){
+  durationControl.value = video.currentTime;
 }
 
-eventsInit();
+function stopInterval(){
+  video.pause();
+  clearInterval(intervalId);
+}
+
+function setVideoDuration(){
+  if(video.pause){
+    video.play();
+  }else{
+    video.pause();
+  }
+
+  video.currentTime = durationControl.value;
+  intervalId = setInterval(updateDuration, 1000/66);
+}
+
+function changeSoundVolume(){
+  video.volume = soundControl.value / 10;
+}
+
+function soundOf(){
+  if(video.volume === 0){
+    video.volume = soundLevel;
+    soundControl.value = soundLevel * 10;
+  } else{
+    soundLevel = video.volume;
+    video.volume = 0;
+    soundControl.value = 0;
+  }
+}

@@ -82,7 +82,8 @@
 }
 
 .colors__item-content {
-    background: rgba(51, 53, 55, 0.9); // не понимаю как задать прозрачность для фона, чтобы ее не наследовали другие элеиенты
+    background: rgba(51, 53, 55, 0.9); 
+    opacity: 0.95;
     width: 0;
     position: relative;
     overflow: hidden;

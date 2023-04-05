@@ -28,8 +28,8 @@ const resetActiveClassForItem = (items, itemEq, activeClass) => {
 const performeTransition = (sectionEq) => {
     if (inScroll) return;
 
-    const transitionOver = 1000;
-    const mouseInertionOver = 300;
+    // const transitionOver = 1000;
+    // const mouseInertionOver = 300;
 
     inScroll = true;
     const position = countSectionPosition(sectionEq);
@@ -43,7 +43,9 @@ const performeTransition = (sectionEq) => {
     setTimeout(() => {
         inScroll = false;
         resetActiveClassForItem(menuItems, sectionEq, "fixed-menu__item--active");
-    }, transitionOver + mouseInertionOver);
+     }, 800);
+     
+    //  transitionOver + mouseInertionOver);
 };
 
 const viewportScroller = () => {
