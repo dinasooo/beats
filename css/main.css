@@ -2121,7 +2121,7 @@ a {
 }
 
 .colors {
-  background: url(../../img/colors.png) center center/cover no-repeat;
+  background: url(../img/colors.png) center center/cover no-repeat;
   position: relative;
 }
 
