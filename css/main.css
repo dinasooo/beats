@@ -1906,6 +1906,12 @@ a {
 @media screen and (max-width: 768px) {
   .crew__photo {
     overflow: hidden;
+    margin-bottom: 1.3125rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .crew__photo {
+    margin-bottom: 1.125rem;
   }
 }
 
@@ -1957,6 +1963,12 @@ a {
 .crew__job {
   line-height: 1.1875rem;
   margin-bottom: 0.25rem;
+}
+@media screen and (max-width: 768px) {
+  .crew__job {
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
 }
 
 .crew__desc {
@@ -2121,6 +2133,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .colors__item {
@@ -2138,6 +2154,16 @@ a {
 }
 .colors__item--red {
   background: #E01F3C;
+}
+@media screen and (max-width: 480px) {
+  .colors__item.active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
 }
 
 .colors__item-title {
